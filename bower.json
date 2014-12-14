@@ -1,0 +1,47 @@
+{
+  "name": "nb-wysiwyg",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "Nicholas Bollweg (Nick) <nick.bollweg@gmail.com>"
+  ],
+  "description": "Rich text editor for Markdown cells in the IPython Notebook",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "ipython",
+    "ipynb",
+    "markdown",
+    "html",
+    "wysiwyg",
+    "nbextension"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "scribe": "~1.1.0",
+    
+    "scribe-plugin-blockquote-command": "0.1.0",
+    "scribe-plugin-code-command": "0.1.0",
+    "scribe-plugin-curly-quotes": "0.1.8",
+    "scribe-plugin-formatter-plain-text-convert-new-lines-to-html": "0.1.1",
+    "scribe-plugin-heading-command": "0.1.0",
+    "scribe-plugin-intelligent-unlink-command": "0.1.5",
+    "scribe-plugin-keyboard-shortcuts": "0.1.1",
+    "scribe-plugin-link-prompt-command": "0.1.2",
+    "scribe-plugin-sanitizer": "0.1.4",
+    "scribe-plugin-smart-lists": "0.1.6",
+    "scribe-plugin-toolbar": "0.1.4",
+    
+    "to-markdown": "~0.0.2"
+  }
+}

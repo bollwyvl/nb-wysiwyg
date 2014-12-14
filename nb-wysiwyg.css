@@ -1,0 +1,10 @@
+.text_cell.unrendered .input_area {
+  display: flex;
+}
+
+.text_cell.unrendered .input_area .CodeMirror,
+.text_cell.unrendered .input_area .scribe
+{
+  flex: 1;
+}
+
