@@ -1,6 +1,6 @@
 {
   "name": "nb-wysiwyg",
-  "main": "index.js",
+  "main": "nb-wysiwyg.js",
   "version": "0.0.0",
   "authors": [
     "Nicholas Bollweg (Nick) <nick.bollweg@gmail.com>"
@@ -11,11 +11,13 @@
   ],
   "keywords": [
     "ipython",
+    "jupyter",
     "ipynb",
     "markdown",
     "html",
     "wysiwyg",
-    "nbextension"
+    "nbextension",
+    "scribe"
   ],
   "license": "MIT",
   "private": true,
