@@ -20,18 +20,9 @@
     "scribe"
   ],
   "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "app/bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
     "scribe": "~1.1.0",
-    
+
     "scribe-plugin-blockquote-command": "0.1.0",
     "scribe-plugin-code-command": "0.1.0",
     "scribe-plugin-curly-quotes": "0.1.8",
@@ -43,7 +34,7 @@
     "scribe-plugin-sanitizer": "0.1.4",
     "scribe-plugin-smart-lists": "0.1.6",
     "scribe-plugin-toolbar": "0.1.4",
-    
+
     "to-markdown": "~0.0.2"
   }
 }
