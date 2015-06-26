@@ -54,20 +54,14 @@ var _btn_bars = [
 ];
 
 
-var _bc = '/nbextensions/nb-wysiwyg/bower_components/',
+var _bc = '/nbextensions/nb-wysiwyg/lib/',
   _cfg = {
     paths: {
       he: _bc + "he/he",
-      toMarkdown: _bc + "to-markdown/src/to-markdown"
-    },
-    shim: {
-      toMarkdown: {
-        deps: ['he'],
-        exports: "toMarkdown"
-      }
+      toMarkdown: _bc + "to-markdown/dist/to-markdown"
     }
   },
-  
+
   _scribe = function(plugin){
     var comp = "scribe" + (plugin ? "-plugin-" + plugin : "");
     _cfg.paths[comp] = _bc + comp + '/' + comp;
@@ -77,15 +71,15 @@ var _bc = '/nbextensions/nb-wysiwyg/bower_components/',
 require(_cfg, [
     'jquery',
     'underscore',
-  
+
     'base/js/namespace',
     'notebook/js/textcell',
-  
+
     'toMarkdown',
     'components/marked/lib/marked',
-    
+
     _scribe(),
-    
+
     _scribe('blockquote-command'),
     _scribe('code-command'),
     _scribe('curly-quotes'),
@@ -99,7 +93,7 @@ require(_cfg, [
     _scribe('toolbar')
   ], function (
     $, _,
-    IPython, textCell, 
+    IPython, textCell,
     toMarkdown, marked,
     Scribe,
     scribePluginBlockquoteCommand,
@@ -120,7 +114,7 @@ require(_cfg, [
     type: "text/css",
     href: "/nbextensions/nb-wysiwyg/nb-wysiwyg.css"
   }));
-  
+
   $([IPython.events]).on('edit_mode.Cell', function(evt, data){
     var cell = data.cell;
     if(!(cell instanceof textCell.MarkdownCell)){ return; }
@@ -148,14 +142,14 @@ require(_cfg, [
           cm.focus();
         }, 0);
       };
-    
+
     scribe.on('content-changed', sChange);
     cm.on('change', cmChange);
-    
+
     cmChange();
 
     IPython.keyboard_manager.register_events(el);
-    
+
     // set up toolbar
     _btn_bars.map(function(bar){
       var $bar = $("<div/>", {"class": "btn-group"})
@@ -175,7 +169,7 @@ require(_cfg, [
         }
       });
     });
-    
+
     // set up scribe stuff
     scribe.use(scribePluginBlockquoteCommand());
     scribe.use(scribePluginCodeCommand());
@@ -213,9 +207,9 @@ require(_cfg, [
       }
     }));
     scribe.use(scribePluginFormatterPlainTextConvertNewLinesToHtml());
-    
+
   });
 });
 
-  
+
 })();
